@@ -56,16 +56,3 @@ Route::get('/denda', 'DendaController@index')->name('denda');
 Route::get('/denda/lunasi/{id}', 'DendaController@bayar');
 Route::get('/denda/kwitansi/{id}', 'DendaController@kwitansi');
 Route::resource('/denda','DendaController');
-
-//laporan
-Route::get('/laporan', 'LaporanController@index')->name('laporan');
-Route::get('/laporan/pdf', 'LaporanController@pdf');
-Route::get('/laporan/peminjamanpdf', 'LaporanController@peminjamanpdf');
-Route::get('/laporan/periodepdf', 'LaporanController@periodepdf');
-Route::get('/laporan/anggotapdf', 'LaporanController@anggotapdf');
-Route::get('/laporan/bukupdf', 'LaporanController@bukupdf');
-Route::resource('/laporan','LaporanController');
-
-Route::get('laporan','LaporanController@index')->name('laporan');
-// Route::get('/anggota/data','AnggotaController@dataanggota')->name('data');
-// Route::resource('/admin','AdminController')->except(['edit','update', 'create']);
